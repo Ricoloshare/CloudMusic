@@ -5,9 +5,15 @@ import store from './store'
 import fastclick from 'fastclick'
 import VueLazyload from 'vue-lazyload'
 import Loading from './plugin/index'
+import VueCookies from 'vue-cookies'
 
 Vue.use(VueLazyload)
 Vue.use(Loading)
+Vue.use(VueCookies)
+
+// set default config
+Vue.$cookies.config('7d')
+
 // or with options
 Vue.use(VueLazyload, {
   preLoad: 1.3,

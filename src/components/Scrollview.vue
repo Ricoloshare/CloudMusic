@@ -11,7 +11,7 @@ export default {
     name: 'Scrollview',
     mounted() {
 			this.iscroll = new IScroll(this.$refs.myscroll,{
-				mouseWheel: false,
+				mouseWheel: true,
 				scrollbars: false,
 				scrollX:false,
 				scrollY:true,

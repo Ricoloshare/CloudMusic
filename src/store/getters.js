@@ -33,4 +33,12 @@ export default{
     getCurrentime:state => {
         return state.Currentime
     },
+
+
+    getHabitsList:state => {
+        return state.Habits
+    },
+    getRankList:state => {
+        return state.Rank
+    },
 }

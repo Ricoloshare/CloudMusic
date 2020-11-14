@@ -1,8 +1,8 @@
 <template>
-  <header class="header" @click="changeTheme()">
+  <header class="header">
     <div class="header_left"></div>
-    <div class="header_title">小李云音乐</div>
-  <div class="header_right"></div>
+    <div class="header_title">挑战30天：坚持30天做一件小事</div>
+  <div class="header_right" @click="user"></div>
 </header>
 </template>
 
@@ -11,17 +11,12 @@ export default {
   name: 'Head', 
   data:function(){
     return {
-      theme: ['theme','theme1','theme2',],
-      index: 0
+      
     }
   },
   methods:{
-    changeTheme(){
-      this.index++;
-      if(this.index >=3){
-        this.index = 0;
-      }
-      document.documentElement.setAttribute('data-theme', this.theme[this.index]); 
+    user(){
+      this.$router.push('/User');
     }
   }
 }

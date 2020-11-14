@@ -1,28 +1,23 @@
 import Vue from 'vue'
-// import Recommend from "../views/Recommend.vue";
-// import Singer from "../views/Singer.vue";
-// import Rank from "../views/Rank.vue";
-// import Search from "../views/Search.vue";
+
 import VueRouter from 'vue-router'
 
 // 组件按需加载  可查看文档Vue Router懒加载
-const Recommend = () => import("../views/Recommend.vue")
-const Singer = () => import("../views/Singer.vue")
-const Video = () => import("../views/Video.vue")
-const Search = () => import("../views/Search.vue")
-const Playlistdetail = () => import("../views/Playlistdetail.vue")
+const Home = () => import("../views/Home.vue")
+const Ranker = () => import("../views/Ranker.vue")
+const Mood = () => import("../views/Mood.vue")
+const Commend = () => import("../views/Commend.vue")
+const User = () => import("../views/User.vue")
 
 Vue.use(VueRouter)
 
 const routes = [
-  {path:'/', redirect: '/recommend'},
-  {path:'/recommend',
-   component: Recommend,
-   children: [{path:'details/:id/:type', component: Playlistdetail}]
-  },
-  {path: '/search', component: Search },
-  {path:'/video', component: Video},
-  {path: '/singer', component: Singer }
+  {path:'/', redirect: '/Home'},
+  {path:'/Home',component: Home,},
+  {path:'/Mood', component: Mood},
+  {path: '/Ranker', component: Ranker},
+  {path: '/Commend', component: Commend},
+  {path: '/User', component: User}
 ]
 
 const router = new VueRouter({

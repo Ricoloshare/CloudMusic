@@ -1,9 +1,9 @@
 <template>
     <div class="tabbar">
-        <router-link class="tab" to="/recommend"><span>推荐</span> </router-link>
-        <router-link class="tab" to="/singer">歌手</router-link>
-        <router-link class="tab" to="/video">视频</router-link>
-        <router-link class="tab" to="/search">搜索</router-link>
+        <router-link class="tab" to="/Home"><span>主页</span> </router-link>
+        <router-link class="tab" to="/Commend">表彰墙</router-link>
+        <router-link class="tab" to="/Mood">心情</router-link>
+        <router-link class="tab" to="/Ranker">挑战排名</router-link>
     </div>
 </template>
 
